@@ -1,6 +1,8 @@
 ﻿using AutomationFramework.WebElementParser;
 using BLL.Actions;
 using BLL.Browser;
+using BLL.Extensions;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -27,10 +29,30 @@ namespace Web.Automation.SpecFlow
         [When(@"Click on ""(.*)"" Link")]
         public void WhenClickOnLink(string link)
         {
-            var _link = _parser.GetElementByName(link);
-            ElementActions.ClickLink(_link);
+            try
+            {
+                var _link = _parser.GetElementByName(link);
+                ElementActions.ClickLink(_link);                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }            
         }
 
+        [When(@"Choose ""(.*)"" file to upload")]
+        public void WhenChooseFileToUpload(string _file)
+        {
+            var _uploadButton = _parser.GetElementByName("Choose file");
+            ElementActions.UploadFile(_uploadButton, _file);
+        }
+
+        [When(@"Click on ""(.*)"" button")]
+        public void WhenClickOnButton(string _button)
+        {
+            var _uploadButton = _parser.GetElementByName(_button);
+            ElementActions.ClickButton(_uploadButton);
+        }
 
     }
 }

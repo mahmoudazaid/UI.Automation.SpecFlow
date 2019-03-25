@@ -66,6 +66,7 @@
     <Compile Include="Browser\Driver.cs" />
     <Compile Include="Extensions\ElementExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ScreenShot.cs" />
     <Compile Include="WebElementParser\ElementParser.cs" />
     <Compile Include="WebElementParser\LocatorFactory.cs" />
     <Compile Include="WebElementParser\LocatorTypes.cs" />
@@ -77,9 +78,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Actions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

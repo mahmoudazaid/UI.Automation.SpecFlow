@@ -1,4 +1,5 @@
 ﻿using BLL.Browser;
+using BLL.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -24,6 +25,9 @@ namespace Web.Automation.SpecFlow
         [AfterScenario]
         public void AfterScenario()
         {
+            if (ScenarioContext.Current.TestError != null)
+                ScreenShot.TakeScreenShot();
+
             Driver.CloseBrowser();
         }
     }

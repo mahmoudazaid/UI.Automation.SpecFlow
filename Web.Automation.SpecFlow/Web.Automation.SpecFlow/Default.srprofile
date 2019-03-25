@@ -9,6 +9,11 @@
   <TestAssemblyPaths>
     <TestAssemblyPath>Web.Automation.SpecFlow.dll</TestAssemblyPath>
   </TestAssemblyPaths>
+
+  <Report>
+    <Template name="Reports\ReportTemplate.cshtml" outputName="TestResult.html"/>
+  </Report>
+
   <DeploymentTransformation>
     <Steps>
       <ConfigFileTransformation configFile="App.config">

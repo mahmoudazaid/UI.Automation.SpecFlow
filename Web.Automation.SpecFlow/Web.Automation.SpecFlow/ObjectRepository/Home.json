@@ -3,5 +3,30 @@
     "name": "A/B Testing",
     "locator": "xpath",
     "value": "//a[contains(text(),'A/B Testing')]"
-  } 
+  },
+  {
+    "name": "Basic Auth",
+    "locator": "xpath",
+    "value": "//a[contains(text(),'Basic Auth')]"
+  },
+  {
+    "name": "Challenging DOM",
+    "locator": "xpath",
+    "value": "//a[contains(text(),'Challenging DOM')]"
+  },
+  {
+    "name": "File Upload",
+    "locator": "xpath",
+    "value": "//a[contains(text(),'File Upload')]"
+  },
+  {
+    "name": "Upload",
+    "locator": "xpath",
+    "value": "//input[@value='Upload']"
+  },
+  {
+    "name": "Choose file",
+    "locator": "xpath",
+    "value": "//input[@id='file-upload']"
+  }
 ]

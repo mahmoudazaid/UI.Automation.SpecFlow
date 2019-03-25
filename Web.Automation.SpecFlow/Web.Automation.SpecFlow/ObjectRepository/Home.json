@@ -28,5 +28,15 @@
     "name": "Choose file",
     "locator": "xpath",
     "value": "//input[@id='file-upload']"
+  },
+  {
+    "name": "TestUpload.jpg",
+    "locator": "xpath",
+    "value": "//*[contains(text(),'TestUpload.jpg')]"
+  },
+  {
+    "name": "File Uploaded!",
+    "locator": "xpath",
+    "value": "//*[contains(text(),'File Uploaded!')]"
   }
 ]

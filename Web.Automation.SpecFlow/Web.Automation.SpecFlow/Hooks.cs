@@ -27,7 +27,7 @@ namespace Web.Automation.SpecFlow
         {
             if (ScenarioContext.Current.TestError != null)
                 ScreenShot.TakeScreenShot();
-
+            SoftAssertions.AssertAll();
             Driver.CloseBrowser();
         }
     }

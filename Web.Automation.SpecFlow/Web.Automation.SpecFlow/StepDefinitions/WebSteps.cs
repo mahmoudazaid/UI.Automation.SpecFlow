@@ -2,6 +2,7 @@
 using BLL.Actions;
 using BLL.Browser;
 using BLL.Extensions;
+using BLL.Utilities;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -53,6 +54,14 @@ namespace Web.Automation.SpecFlow
             var _uploadButton = _parser.GetElementByName(_button);
             ElementActions.ClickButton(_uploadButton);
         }
+
+        [Then(@"I should see ""(.*)""")]
+        public void ThenIShouldSee(string _text)
+        {
+            var _element = _parser.GetElementByName(_text);
+            SoftAssertions.ShouldSee(_element);           
+        }
+
 
     }
 }

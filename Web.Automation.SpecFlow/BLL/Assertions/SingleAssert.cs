@@ -1,4 +1,6 @@
-﻿namespace BLL.Assertions
+﻿using BLL.Utilities;
+
+namespace BLL.Assertions
 {
     public class SingleAssert
     {
@@ -16,11 +18,7 @@
 
             Failed = _expected != _actual;
             if (Failed)
-            {
-                // TODO Act in case of failure, e.g. take screenshot
-                var screenshot = "MethodToSaveScreenshotAndReturnFilename";
-                _message += $". Screenshot captured at: {screenshot}";
-            }
+                ScreenShot.TakeScreenShot();           
         }
 
         public override string ToString()

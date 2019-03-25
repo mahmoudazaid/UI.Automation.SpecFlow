@@ -16,7 +16,7 @@ namespace Web.Automation.SpecFlow
     [Binding]
     public sealed class SharedSteps
     {
-        protected static string baseURL = ConfigurationManager.AppSettings["URL"];
+        private static string baseURL = ConfigurationManager.AppSettings["URL"];
         private readonly ParsersManager _parser = new ParsersManager("Home.json");
 
 
@@ -59,7 +59,10 @@ namespace Web.Automation.SpecFlow
         public void ThenIShouldSee(string _text)
         {
             var _element = _parser.GetElementByName(_text);
-            SoftAssertions.ShouldSee(_element);           
+            Driver.WebDriver.ScrollToElement(_element, 10);
+            IWebElement element = Driver.WebDriver.InspectElement(_element);
+            string elementText = element.Text;            
+            SoftAssertions.ShouldSee(_text, elementText);           
         }
 
 

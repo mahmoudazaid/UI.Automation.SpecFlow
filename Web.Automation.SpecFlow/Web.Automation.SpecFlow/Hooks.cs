@@ -24,9 +24,7 @@ namespace Web.Automation.SpecFlow
 
         [AfterScenario]
         public void AfterScenario()
-        {
-            if (ScenarioContext.Current.TestError != null)
-                ScreenShot.TakeScreenShot();
+        {            
             SoftAssertions.AssertAll();
             Driver.CloseBrowser();
         }

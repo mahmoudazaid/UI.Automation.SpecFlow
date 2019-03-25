@@ -12,12 +12,9 @@ namespace BLL.Utilities
     {
         public static List<SingleAssert> _verifications = new List<SingleAssert>();
 
-        public static void ShouldSee(By _element)
-        {
-            Driver.WebDriver.ScrollToElement(_element, 10);
-            IWebElement element = Driver.WebDriver.InspectElement(_element);
-            var elementText = element.Text;
-            _verifications.Add(new SingleAssert("",_element ,elementText))
+        public static void ShouldSee(string expectedText, string actualText)
+        {            
+            _verifications.Add(new SingleAssert("Comparing Text",expectedText, actualText));
         }
 
         public static void Add(string message, string expected, string actual)

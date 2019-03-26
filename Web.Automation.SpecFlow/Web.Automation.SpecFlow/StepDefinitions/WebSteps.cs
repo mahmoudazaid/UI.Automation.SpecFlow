@@ -3,12 +3,14 @@ using BLL.Actions;
 using BLL.Browser;
 using BLL.Extensions;
 using BLL.Utilities;
+using FluentAssertions;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Web.Automation.SpecFlow
@@ -64,7 +66,18 @@ namespace Web.Automation.SpecFlow
             string elementText = element.Text;            
             SoftAssertions.ShouldSee(_text, elementText);           
         }
+        [Then(@"Check ""(.*)"" downloaded successfuly")]
+        public void ThenCheckDownloadedSuccessfuly(string _filename)
+        {
+            Thread.Sleep(3000);
+            var checker=FilesManager.FileDownloaded(_filename);
+            SoftAssertions.AddTrue("The file should be deleted", checker);
+        }
 
-
+        [Then(@"Delete ""(.*)"" file")]
+        public void ThenDeleteFile(string _filename)
+        {
+            FilesManager.DeleteFile(_filename);
+        }
     }
 }

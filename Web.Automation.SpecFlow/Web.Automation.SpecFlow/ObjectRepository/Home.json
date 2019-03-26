@@ -38,5 +38,15 @@
     "name": "File Uploaded!",
     "locator": "xpath",
     "value": "//*[contains(text(),'File Uploaded!')]"
+  },
+  {
+    "name": "File Download",
+    "locator": "xpath",
+    "value": "//a[@href='/download']"
+  },
+  {
+    "name": "some-file.txt",
+    "locator": "xpath",
+    "value": "//a[contains(text(),'some-file.txt')]"
   }
 ]

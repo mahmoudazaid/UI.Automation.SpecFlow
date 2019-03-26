@@ -73,6 +73,7 @@
     <Compile Include="Browser\Driver.cs" />
     <Compile Include="Extensions\ElementExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\FilesManager.cs" />
     <Compile Include="Utilities\ScreenShot.cs" />
     <Compile Include="Assertions\SoftAssertions.cs" />
     <Compile Include="WebElementParser\ElementParser.cs" />

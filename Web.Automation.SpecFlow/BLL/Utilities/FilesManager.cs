@@ -5,7 +5,7 @@ namespace BLL.Utilities
 {
     public class FilesManager
     {
-        public static string Path = System.Environment.GetEnvironmentVariable("USERPROFILE") + "\\Downloads";
+        private readonly static string Path = System.Environment.GetEnvironmentVariable("USERPROFILE") + "\\Downloads";
 
         public static bool FileDownloaded(string filename)
         {
@@ -22,7 +22,6 @@ namespace BLL.Utilities
                     thisFile.LastWriteTime.AddMinutes(2).ToShortTimeString() == DateTime.Now.ToShortTimeString() ||
                     thisFile.LastWriteTime.AddMinutes(3).ToShortTimeString() == DateTime.Now.ToShortTimeString())
                         exist = true;
-                    File.Delete(p);
                     break;
                 }
             }

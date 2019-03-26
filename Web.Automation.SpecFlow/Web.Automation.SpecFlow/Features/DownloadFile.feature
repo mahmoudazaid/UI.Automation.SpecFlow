@@ -1,6 +1,6 @@
 ﻿@Chrome
 
-Feature: OpenBrowser
+Feature: DownloadFile
 	
 
 Scenario: Open Browser

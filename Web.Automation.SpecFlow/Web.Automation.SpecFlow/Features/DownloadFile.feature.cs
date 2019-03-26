@@ -17,21 +17,21 @@ namespace Web.Automation.SpecFlow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("OpenBrowser", new string[] {
-            "Chrome"}, SourceFile="Features\\OpenBrowser.feature", SourceLine=2)]
-    public partial class OpenBrowserFeature
+    [TechTalk.SpecRun.FeatureAttribute("DownloadFile", new string[] {
+            "Chrome"}, SourceFile="Features\\DownloadFile.feature", SourceLine=2)]
+    public partial class DownloadFileFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "OpenBrowser.feature"
+#line 1 "DownloadFile.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "OpenBrowser", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DownloadFile", null, ProgrammingLanguage.CSharp, new string[] {
                         "Chrome"});
             testRunner.OnFeatureStart(featureInfo);
         }

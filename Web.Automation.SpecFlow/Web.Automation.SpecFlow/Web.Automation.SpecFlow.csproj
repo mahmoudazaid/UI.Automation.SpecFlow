@@ -84,10 +84,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\OpenBrowser.feature.cs">
+    <Compile Include="Features\Checkboxes.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OpenBrowser.feature</DependentUpon>
+      <DependentUpon>Checkboxes.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\DownloadFile.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DownloadFile.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\UploadFile.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadFile.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,9 +106,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Default.srprofile" />
-    <None Include="Features\OpenBrowser.feature">
+    <None Include="Features\Checkboxes.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>OpenBrowser.feature.cs</LastGenOutput>
+      <LastGenOutput>Checkboxes.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\DownloadFile.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DownloadFile.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\UploadFile.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UploadFile.feature.cs</LastGenOutput>
     </None>
     <None Include="ObjectRepository\Home.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

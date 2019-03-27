@@ -33,5 +33,12 @@ namespace BLL.Actions
             Driver.WebDriver.ScrollToElement(_uploadButton, 10);
             Driver.WebDriver.FindElement(_uploadButton).SendKeys(file_Path);
         }
+
+        public static void SelectCheckBox(By _checkbox )
+        {
+            Driver.WebDriver.ScrollToElement(_checkbox, 10);
+            IWebElement checbox = Driver.WebDriver.InspectElement(_checkbox);
+            checbox.Click();
+        }
     }
 }

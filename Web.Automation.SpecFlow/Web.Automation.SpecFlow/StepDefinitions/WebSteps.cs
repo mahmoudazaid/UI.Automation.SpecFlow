@@ -29,7 +29,7 @@ namespace Web.Automation.SpecFlow
             Driver.Visit(baseURL);
         }
 
-        [When(@"Click on ""(.*)"" Link")]
+        [When(@"[Cc]lick on ""(.*)"" Link")]
         public void WhenClickOnLink(string link)
         {
             try
@@ -43,14 +43,14 @@ namespace Web.Automation.SpecFlow
             }            
         }
 
-        [When(@"Choose ""(.*)"" file to upload")]
+        [When(@"[Cc]hoose ""(.*)"" file to upload")]
         public void WhenChooseFileToUpload(string _file)
         {
             var _uploadButton = _parser.GetElementByName("Choose file");
             ElementActions.UploadFile(_uploadButton, _file);
         }
 
-        [When(@"Click on ""(.*)"" button")]
+        [When(@"[Cc]lick on ""(.*)"" button")]
         public void WhenClickOnButton(string _button)
         {
             var _uploadButton = _parser.GetElementByName(_button);
@@ -66,7 +66,7 @@ namespace Web.Automation.SpecFlow
             string elementText = element.Text;            
             SoftAssertions.ShouldSee(_text, elementText);           
         }
-        [Then(@"Check ""(.*)"" downloaded successfuly")]
+        [Then(@"[Cc]heck ""(.*)"" downloaded successfuly")]
         public void ThenCheckDownloadedSuccessfuly(string _filename)
         {
             Thread.Sleep(3000);
@@ -74,10 +74,17 @@ namespace Web.Automation.SpecFlow
             SoftAssertions.AddTrue("The file should be deleted", checker);
         }
 
-        [Then(@"Delete ""(.*)"" file")]
+        [Then(@"[Dd]elete ""(.*)"" file")]
         public void ThenDeleteFile(string _filename)
         {
             FilesManager.DeleteFile(_filename);
         }
+        [When(@"([Cc]heck|[Uu]n[Cc]heck) on ""(.*)"" checkbox")]
+        public void WhenSelectCheckbox(string _checkbox)
+        {
+            var checkbox = _parser.GetElementByName(_checkbox);
+            ElementActions.SelectCheckBox(checkbox);
+        }
+
     }
 }

@@ -48,5 +48,15 @@
     "name": "some-file.txt",
     "locator": "xpath",
     "value": "//a[contains(text(),'some-file.txt')]"
+  },
+  {
+    "name": "Checkboxes",
+    "locator": "xpath",
+    "value": "//a[contains(text(),'Checkboxes')]"
+  },
+  {
+    "name": "checkbox 1",
+    "locator": "xpath",
+    "value": "//form[@id='checkboxes']/input[1]"
   }
 ]

@@ -17,21 +17,21 @@ namespace Web.Automation.SpecFlow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("UploadFile", new string[] {
-            "Chrome"}, SourceFile="Features\\UploadFile.feature", SourceLine=2)]
-    public partial class UploadFileFeature
+    [TechTalk.SpecRun.FeatureAttribute("DragAndDrop", new string[] {
+            "Chrome"}, SourceFile="Features\\DragAndDrop.feature", SourceLine=2)]
+    public partial class DragAndDropFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "UploadFile.feature"
+#line 1 "DragAndDrop.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "UploadFile", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DragAndDrop", null, ProgrammingLanguage.CSharp, new string[] {
                         "Chrome"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -68,21 +68,19 @@ namespace Web.Automation.SpecFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Upload File", SourceLine=4)]
-        public virtual void UploadFile()
+        [TechTalk.SpecRun.ScenarioAttribute("Drag From and Drop to another place", SourceLine=4)]
+        public virtual void DragFromAndDropToAnotherPlace()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Upload File", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drag From and Drop to another place", null, ((string[])(null)));
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
  testRunner.Given("I am on Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
- testRunner.When("Click on \"File Upload\" Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("Click on \"Drag and Drop\" Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
- testRunner.And("Choose \"TestUpload.jpg\" file to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 9
- testRunner.And("Click on \"Upload\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Drag \"A\" and drop to \"B\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

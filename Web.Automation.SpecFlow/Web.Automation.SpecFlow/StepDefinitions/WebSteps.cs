@@ -1,5 +1,4 @@
 ﻿using AutomationFramework.WebElementParser;
-using BLL.Actions;
 using BLL.Browser;
 using BLL.Extensions;
 using BLL.Utilities;
@@ -85,6 +84,15 @@ namespace Web.Automation.SpecFlow
             var checkbox = _parser.GetElementByName(_checkbox);
             ElementActions.SelectCheckBox(checkbox);
         }
+
+        [When(@"[Dd]rag ""(.*)"" and drop to ""(.*)""")]
+        public void WhenDragAnndDropTo(string _source, string _target)
+        {
+            var source = _parser.GetElementByName(_source);
+            var target = _parser.GetElementByName(_target);
+            ElementActions.DragAndDrop(source, target);
+        }
+
 
     }
 }

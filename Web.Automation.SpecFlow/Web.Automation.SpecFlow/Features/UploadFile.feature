@@ -1,4 +1,6 @@
-﻿Feature: UploadFile
+﻿@Chrome
+
+Feature: UploadFile
 	
 Scenario: Upload File
 	Given I am on Home Page

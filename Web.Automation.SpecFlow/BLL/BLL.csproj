@@ -72,6 +72,8 @@
     <Compile Include="Extensions\ElementActions.cs" />
     <Compile Include="Browser\Driver.cs" />
     <Compile Include="Extensions\ElementExtensions.cs" />
+    <Compile Include="Extensions\JSActions.cs" />
+    <Compile Include="Extensions\JSExtenstions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\FilesManager.cs" />
     <Compile Include="Utilities\ScreenShot.cs" />

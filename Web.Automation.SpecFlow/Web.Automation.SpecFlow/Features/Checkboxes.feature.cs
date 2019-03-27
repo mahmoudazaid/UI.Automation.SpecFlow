@@ -17,7 +17,8 @@ namespace Web.Automation.SpecFlow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Checkboxes", SourceFile="Features\\Checkboxes.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("Checkboxes", new string[] {
+            "Chrome"}, SourceFile="Features\\Checkboxes.feature", SourceLine=2)]
     public partial class CheckboxesFeature
     {
         
@@ -30,7 +31,8 @@ namespace Web.Automation.SpecFlow.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Checkboxes", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Checkboxes", null, ProgrammingLanguage.CSharp, new string[] {
+                        "Chrome"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -67,19 +69,19 @@ namespace Web.Automation.SpecFlow.Features
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Check Boxes", new string[] {
-                "mytag"}, SourceLine=3)]
+                "mytag"}, SourceLine=5)]
         public virtual void CheckBoxes()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Boxes", null, new string[] {
                         "mytag"});
-#line 4
+#line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 5
- testRunner.Given("I am on Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
- testRunner.When("Click on \"Checkboxes\" Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
+ testRunner.Given("I am on Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+ testRunner.When("Click on \"Checkboxes\" Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
  testRunner.And("Check on \"checkbox 1\" checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

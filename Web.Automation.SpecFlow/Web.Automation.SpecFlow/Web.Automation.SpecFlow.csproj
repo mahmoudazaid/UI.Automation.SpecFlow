@@ -94,6 +94,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DownloadFile.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\DragAndDrop.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DragAndDrop.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\UploadFile.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +118,10 @@
     <None Include="Features\DownloadFile.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DownloadFile.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\DragAndDrop.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DragAndDrop.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\UploadFile.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

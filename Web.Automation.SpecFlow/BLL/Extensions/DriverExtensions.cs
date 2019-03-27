@@ -36,6 +36,5 @@ namespace BLL.Extensions
             IAlert alert = wait.Until(x => webDriver.SwitchTo().Alert());
             alert.SetAuthenticationCredentials(_username, _password);
         }
-
     }
 }

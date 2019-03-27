@@ -58,5 +58,20 @@
     "name": "checkbox 1",
     "locator": "xpath",
     "value": "//form[@id='checkboxes']/input[1]"
+  },
+  {
+    "name": "Drag and Drop",
+    "locator": "xpath",
+    "value": "//a[contains(text(),'Drag and Drop')]"
+  },
+  {
+    "name": "A",
+    "locator": "xpath",
+    "value": "//div[@id='column-a']"
+  },
+  {
+    "name": "B",
+    "locator": "xpath",
+    "value": "//div[@id='column-b']"
   }
 ]

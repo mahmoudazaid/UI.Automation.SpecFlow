@@ -2,13 +2,9 @@
 using BLL.Browser;
 using BLL.Extensions;
 using BLL.Utilities;
-using FluentAssertions;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using TechTalk.SpecFlow;
 
@@ -34,7 +30,7 @@ namespace Web.Automation.SpecFlow
             try
             {
                 var _link = _parser.GetElementByName(link);
-                ElementActions.ClickLink(_link);                
+                SEActions.ClickLink(_link);                
             }
             catch (Exception ex)
             {
@@ -46,14 +42,14 @@ namespace Web.Automation.SpecFlow
         public void WhenChooseFileToUpload(string _file)
         {
             var _uploadButton = _parser.GetElementByName("Choose file");
-            ElementActions.UploadFile(_uploadButton, _file);
+            SEActions.UploadFile(_uploadButton, _file);
         }
 
         [When(@"[Cc]lick on ""(.*)"" button")]
         public void WhenClickOnButton(string _button)
         {
             var _uploadButton = _parser.GetElementByName(_button);
-            ElementActions.ClickButton(_uploadButton);
+            SEActions.ClickButton(_uploadButton);
         }
 
         [Then(@"I should see ""(.*)""")]
@@ -82,7 +78,7 @@ namespace Web.Automation.SpecFlow
         public void WhenSelectCheckbox(string _checkbox)
         {
             var checkbox = _parser.GetElementByName(_checkbox);
-            ElementActions.SelectCheckBox(checkbox);
+            SEActions.SelectCheckBox(checkbox);
         }
 
         [When(@"[Dd]rag ""(.*)"" and drop to ""(.*)""")]
@@ -90,7 +86,7 @@ namespace Web.Automation.SpecFlow
         {
             var source = _parser.GetElementByName(_source);
             var target = _parser.GetElementByName(_target);
-            ElementActions.DragAndDrop(source, target);
+            SEActions.DragAndDrop(source, target);
         }
 
 

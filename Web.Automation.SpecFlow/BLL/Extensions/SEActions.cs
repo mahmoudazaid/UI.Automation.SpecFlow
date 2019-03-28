@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace BLL.Extensions
 {
-    public class ElementActions
+    public class SEActions
     {
         public static void ClickLink(By _link)
         {
